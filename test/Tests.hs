@@ -51,30 +51,6 @@ specs = do
             it "split no v" $ do
               jogarForaAté "Eu quis dizer, voce nao quis escutar." 'v'  `shouldBe` "voce nao quis escutar."
 
-          describe "palíndromo" $ do
-            it "retorna True" $ do
-              palíndromo "ana" `shouldBe` True
-            it "retorna False" $ do
-              palíndromo "jose" `shouldBe` False
-            it "retorna False" $ do
-              palíndromo "natan foi viajar" `shouldBe` False
-            it "retorna True ignorando maiúscula" $ do
-              palíndromo "Natan" `shouldBe` True
-            it "retorna True, ignorando símbolos " $ do
-              palíndromo "Ole! Maracuja, caju, caramelo." `shouldBe` True
-
-          describe "palíndromo genérico" $ do
-            it "retorna True" $ do
-              palíndromo' "ana" `shouldBe` True
-            it "retorna False" $ do
-              palíndromo' "jose" `shouldBe` False
-            it "retorna False inteiros" $ do
-              palíndromo' [1,2,3] `shouldBe` False
-            it "retorna False inteiros" $ do
-              palíndromo' [1,2,3,2,1] `shouldBe` True
-            it "retorna True booleanos" $ do
-              palíndromo' [True,False,False,True] `shouldBe` True
-
           describe "trim" $ do
             it "igual" $ do
               trim "Implemente uma" `shouldBe` "Implemente uma"
