@@ -4,6 +4,149 @@ import Data.List (group)
 
 -- Defina as seguintes funções USANDO recursão.
 
+
+
+{- 
+Nos seguintes exercícios, implemente suas soluções de forma recursiva
+Defina os tipos das funções.
+-}
+
+
+{-
+Uma função que calcule x * y
+
+Entrada:
+    - x
+    - y
+
+Resultado: 
+    - x * y
+
+Exemplos:
+>>>multiplique 2 3
+6
+>>>multiplique 3 3
+9
+
+>>>multiplique 3 (-3)
+-9
+
+>>>multiplique (-3) 3
+-9
+
+>>>multiplique (-3) (-3)
+9
+
+-}
+
+multiplique :: Int -> Int -> Int
+multiplique x n = undefined
+
+{-
+Uma função que calcule a n-ésima potência de um número x.
+
+Entrada:
+    - x: base
+    - n: expoente
+
+Resultado: 
+    - x elevado a n
+
+Exemplos:
+>>>potência 2 3
+8
+>>>potência (-3) 2
+9
+-}
+
+potência :: Int -> Int -> Int
+potência x n = undefined
+
+{-
+Uma função que calcule log base 2 de n por divisões sucessivas por 2.
+
+Entrada:
+    - n
+
+Resultado: 
+    - log_2 (n)
+
+Exemplos:
+>>>logBase2 100
+6
+
+>>>logBase2 16
+4
+
+-}
+logBase2 n = undefined
+
+
+{-
+Uma função que rotacione os elementos de uma tupla n vezes.
+
+Entrada:
+    - t: tupla de 5 inteiros.
+    - n: número de rotações a ser feito. Rotacionar à direita se n é positivo e a esquerda se n é negativo.
+
+Resultado: 
+    - t rotacionado n vezes.
+
+Exemplos:
+>>>rotacionar (1,2,3,4,5) 2
+(4,5,1,2,3)
+>>>rotacionar (1,2,3,4,5) (-2)
+(3,4,5,1,2)
+-}
+
+rotacionar t n = undefined
+
+
+
+
+
+{-
+Desafio!!
+
+A fórmula de Leibniz para pi (http://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80)
+estabelece que a constante pode ser calculada como a série
+
+pi = (4/1) - (4/3) + (4/5) - (4/7)...
+
+Implemente uma função recursiva que calcule a constante até uma quantidade n de termos.
+
+Entrada:
+    - n: quantidade de termos
+
+Resultado:
+    - pi, calculado com n passos da série
+
+Exemplos:
+
+>>>piDeLeibniz 1
+4.0
+
+>>>piDeLeibniz 2
+2.666666666666667
+
+>>>piDeLeibniz 3
+3.466666666666667
+
+>>>piDeLeibniz 2000
+3.1410926536210413
+
+>>>piDeLeibniz 3000
+3.1412593202657186
+
+-}
+
+piDeLeibniz = undefined
+
+
+
+
+
+
 {-
 Defina uma função que retorne a sub-lista com t elementos começando na posição i da lista dada.
 
