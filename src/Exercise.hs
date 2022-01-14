@@ -82,6 +82,71 @@ Exemplos:
 logBase2 n = undefined
 
 
+
+
+
+{-
+Escreva uma função **recursiva**  que calcula a soma dos quadrados dos números inteiros entre os parâmetros passados, inclusive.
+
+Entrada:
+    - i - Inteiro
+    - n - Inteiro
+Resultado
+    - i^2 + (i+1)^2 + ... + n^2
+
+>>>somaDosQuadrados 1 3
+14
+
+>>>somaDosQuadrados 3 6
+86
+
+>>>somaDosQuadrados 5 2
+54
+
+>>>somaDosQuadrados 3 (-2)
+19
+-}
+
+somaDosQuadrados i n = undefined
+
+
+
+{-
+Defina uma função que remova as primeiras duplicatas de uma lista de inteiros.
+
+Entrada:
+    - l - lista de inteiros.
+
+Resultado:
+    - lista em que as primeiras ocorrências repetidas de qualquer valor foram removidas.
+
+>>>removeDuplicatas [1,2,3,4,5,3,7,8,3]
+[1,2,4,5,7,8,3]
+
+-}
+
+removeDuplicatas l = undefined
+
+
+{-
+Defina uma função que remova as últimas duplicatas de uma lista de inteiros.
+
+Entrada:
+    - l - lista de inteiros.
+
+Resultado:
+    - lista em que as primeiras ocorrências repetidas de qualquer valor foram removidas.
+
+>>>removeDuplicatas2 [1,2,3,4,5,3,7,8,3]
+[1,2,3,4,5,7,8]
+
+-}
+
+removeDuplicatas2 l = undefined
+
+
+
+
 {-
 Uma função que rotacione os elementos de uma tupla n vezes.
 
