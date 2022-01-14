@@ -2,7 +2,7 @@ module Exercise where
 import Data.Char (isLetter, toLower)
 import Data.List (group)
 
--- Defina as seguintes funções sem usar recursão.
+-- Defina as seguintes funções USANDO recursão.
 
 {-
 Defina uma função que retorne a sub-lista com t elementos começando na posição i da lista dada.
@@ -94,97 +94,6 @@ Exemplos:
 -}
 
 jogarForaAté l e = undefined 
-
-
-
-{-
-Um palíndromo é uma palavra que pode ser lida da esquerda para a direita ou da direita para a esquerda com o mesmo resultado, como por exemplo, ovo e Natan.
-O conceito pode ser estendido para frases se ignorarmos espaços, acentos e sinais de pontuação, por exemplo, "Olé! Maracujá, caju, caramelo.".
-
-Escreva uma função que teste se a entrada é um palíndromo.
-Assuma que a entrada não tem acentos ou pontuações e que ou todas as letras são maiúsculas ou todas são minúsculas.
-
-Use isLetter e filter para ignorar o que não for letra.
-Somente caracteres não acentuados foram usados.
-
-Entrada:
-    - s - String
-
-Resultado: 
-    - True se s é um palíndromo; False caso contrário.
-
-Exemplos:
->>>palíndromo "ana"
-True
->>>palíndromo "jose"
-False
-
->>>palíndromo "natan foi viajar"
-False
-
->>>palíndromo "natan"
-True
-
->>> palíndromo "Ole! Maracuja, caju, caramelo."
-True
--}
-
-palíndromo :: String -> Bool
-palíndromo s = undefined 
-
-
-{-
-O conceito de palíndromo pode ser aplicado a qualquer lista, por exemplo de inteiros. Neste caso, [1,2,3,4,5,4,3,2,1] seria um palíndromo.
-Escreva uma função que teste se uma lista qualquer é um palíndromo.
-
-Entrada:
-    - s - lista de "qualquer" coisa.
-
-Resultado: 
-    - True se s é uma lista palíndroma; False caso contrário.
-
-Exemplos:
->>>palíndromo' "ana"
-True
->>>palíndromo' "jose"
-False
-
->>>palíndromo' [1,2,3]
-False
-
->>>palíndromo' [True,False,False,True]
-True
-
--}
-
-palíndromo' s = undefined 
-
-
-{-
-Frequentemente precisamos limpar dados entrados por usuários em fomulários.
-Por exemplo, precisamos tirar os espaços no início e fim dos dados digitados, como em " José de Abreu  "
-Algumas linguagens tem uma função trim que remove tais espaços em branco.
-
-Implemente uma função que elimine todos os espaços em branco no início e fim de uma string.
-
->>>trim "Implemente uma"
-"Implemente uma"
-
->>>trim " Implemente uma "
-"Implemente uma"
-
->>>trim "  Implemente uma  "
-"Implemente uma"
-
->>>trim "   Implemente uma"
-"Implemente uma"
-
->>>trim "Implemente uma   "
-"Implemente uma"
--}
-
-trim :: String -> String
-trim s = undefined 
 
 
 {-
