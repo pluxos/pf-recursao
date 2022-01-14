@@ -13,7 +13,7 @@ Defina os tipos das funções.
 
 
 {-
-Uma função que calcule x * y
+Uma função que calcule x * y usando apenas o operador de adição na recursão.
 
 Entrada:
     - x
@@ -109,6 +109,19 @@ Resultado
 
 somaDosQuadrados i n = undefined
 
+
+{- 
+Defina uma função que calcule a união de duas listas, isto é, sua concatenação, sem repetições.
+Assuma que as entradas não possuem repetições.
+
+Entrada:
+    - l1, l2: listas de inteiros.
+
+Resultados:
+    - lista com a união.
+-}
+
+uniao l1 l2 = undefined
 
 
 {-
