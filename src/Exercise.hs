@@ -119,9 +119,30 @@ Entrada:
 
 Resultados:
     - lista com a união.
+    
+>>> união [1,2,3] [3,4,5]
+[1,2,3,4,5]
 -}
 
-uniao l1 l2 = undefined
+união l1 l2 = undefined
+
+
+
+{- 
+Defina uma função que calcule a diferença de duas listas, isto é, a lista com os elementos da primeira lista que não estão na segunda lista.
+
+Entrada:
+    - l1, l2: listas de inteiros.
+
+Resultados:
+    - lista com a diferença.
+    
+>>> diferença [1,2,3] [3,4,5]
+[1,2]
+-}
+
+diferença l1 l2 = undefined
+
 
 
 {-
