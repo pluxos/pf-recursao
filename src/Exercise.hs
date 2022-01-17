@@ -169,7 +169,7 @@ Entrada:
     - l - lista de inteiros.
 
 Resultado:
-    - lista em que as primeiras ocorrências repetidas de qualquer valor foram removidas.
+    - lista em que as primeiras ocorrências repetidas de qualquer valor foram mantidas.
 
 >>>removeDuplicatas2 [1,2,3,4,5,3,7,8,3]
 [1,2,3,4,5,7,8]
