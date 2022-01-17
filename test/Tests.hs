@@ -4,6 +4,7 @@ import Test.QuickCheck
 import Control.Exception.Base
 
 import Data.Char (isUpper,isLower,toUpper,toLower,isLetter)
+import Data.List
 
 import Exercise
 import Exercise (combinaMetades)
@@ -16,6 +17,38 @@ main = hspecWith defaultConfig {configFastFail = False} specs
 
 specs :: Spec
 specs = do
+          describe "multiplique" $ do
+            it "multiplica" $ property $
+               (\x y -> multiplique x y == x*y)
+
+          describe "potência" $ do
+            it "potencia" $ property $
+               (\x y -> potência x (abs y) == x^(abs y))
+          
+          describe "logBase2" $ do
+            it "log 2" $ property $
+               (\x -> if x == 0 
+                       then True 
+                       else logBase2 (abs x) == floor (logBase 2.0 (fromIntegral (abs x))))
+
+          describe "somaDoQuadrados" $ do
+            it "soma" $ property $
+               (\x y -> somaDosQuadrados x y == sum [e*e | e <- [x..y]])
+
+          describe "união" $ do
+            it "une" $ do
+               união []  [1,2] `shouldBe` [1,2]
+            it "une" $ do
+               união [3]  [1,2] `shouldBe` [3,1,2]
+            it "une" $ do
+               união [2]  [1,2] `shouldBe` [1,2]
+            it "une" $ do
+               união []  [] `shouldBe` []
+
+          describe "removeDuplicatas" $ do
+            it "remove" $ property $
+               (\x -> sort (removeDuplicatas x) == sort (nub x))
+
           describe "subListaDeAte" $ do
             it "retorna string" $ do
               subListaDeAte "entrada" 2 4 `shouldBe` "trad"
@@ -51,14 +84,6 @@ specs = do
             it "split no v" $ do
               jogarForaAté "Eu quis dizer, voce nao quis escutar." 'v'  `shouldBe` "voce nao quis escutar."
 
-          describe "trim" $ do
-            it "igual" $ do
-              trim "Implemente uma" `shouldBe` "Implemente uma"
-            it " começo e fim " $ do
-              trim " Implemente uma " `shouldBe` "Implemente uma"
-            it "vários espaços" $ do
-              trim "  Implemente uma  " `shouldBe` "Implemente uma"
-
           describe "combina metades" $ do
             it "par" $ do
               combinaMetades [1,2,3,4,5,6] `shouldBe` [(1,4),(2,5),(3,6)]
@@ -85,7 +110,7 @@ specs = do
             it "strings" $ do
               compacte ["aaaa","b","cc","aa","d","eeee"] `shouldBe` [('a',4),('b',1),('c',2),('a',2),('d',1),('e',4)]
             it "vazio" $ do
-              compacte ([]::[[Int]]) `shouldBe` []
+              compacte ([]::[[Int]]) `shouldBe` ([]::[(Int,Int)])
 
           describe "descompacte" $ do
             it "simples" $ do
