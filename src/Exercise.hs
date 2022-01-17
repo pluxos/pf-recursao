@@ -239,7 +239,7 @@ Exemplos:
 
 -}
 
-piDeLeibniz = undefined
+piDeLeibniz n = undefined
 
 
 
